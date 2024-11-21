@@ -8,6 +8,6 @@
 <html>
 <body>
     <h2>URL:</h2>
-    <p>${url}</p>
+    <p>${pageContext['url']}</p> <!-- EL Injection vulnerability -->
 </body>
 </html>
