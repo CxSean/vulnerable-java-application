@@ -4,6 +4,7 @@
     String url = request.getParameter("url");
     // Vulnerable to EL Injection
     pageContext.setAttribute("url", url);
+    return ActionContext.getContext().getValueStack().findValue(pageContext['url']).toString();
 %>
 <html>
 <body>
